@@ -28,6 +28,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         words.h words.cpp
         wortliste.txt
     )
+    # Copy wortliste.txt to the output directory
+    configure_file(${CMAKE_SOURCE_DIR}/wortliste.txt ${CMAKE_BINARY_DIR}/wortliste.txt COPYONLY)
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET Hangman APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
 #                 ${CMAKE_CURRENT_SOURCE_DIR}/android)

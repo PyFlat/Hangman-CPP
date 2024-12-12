@@ -55,7 +55,7 @@ void MainWindow::startGame(QString word){
     if (word.isEmpty()){
         currentWord = QString::fromStdString(words.getRandomWord());
     }else{
-        currentWord = word;
+        currentWord = word.toLower();
         ui->custom_word_entry->clear();
     }
 
